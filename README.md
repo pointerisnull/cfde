@@ -1,6 +1,6 @@
-# dwm-bdon
-My fork of suckless dwm
+# cf-desktop-environment
+Computer Friendly Desktop Environment
 
-Requires st and dmenu
-
-Used in Linux Mint 20.2
+Includes my fork of suckless' dwm, st, and slstatus.
+Used to create a minimal desktop experience on linux.
+Requires dmenu and x11.
