@@ -1,12 +1,12 @@
 static char *font = "HackNerdFont-Regular:size=10:antialias=true:autohint=true";
-static int borderpx = 2;
+static int borderpx = 1;
 static char *shell = "/bin/bash";
 char *utmp = NULL;
 char *scroll = NULL;
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 char *vtiden = "\033[?6c";
 static float cwscale = 1.0;
-static float chscale = 1.0;
+static float chscale = 0.9;
 wchar_t *worddelimiters = L" ";
 static unsigned int doubleclicktimeout = 300;
 static unsigned int tripleclicktimeout = 600;
@@ -18,7 +18,7 @@ static unsigned int blinktimeout = 800;
 static unsigned int cursorthickness = 1;
 static int bellvolume = 0;
 char *termname = "st-256color";
-unsigned int tabspaces = 8;
+unsigned int tabspaces = 4;
 /* bg opacity */
 float alpha = 0.8;
 
