@@ -1,1 +1,1 @@
-My private fork of suckless' dwm, st, and slstatus.
+My desktop utilities, including suckless' dwm, st, and slstatus.
