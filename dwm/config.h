@@ -35,7 +35,7 @@ static const char *colors[][3]      = {
 	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
 };
 /* tagging */
-static const char *tags[] = { "", "", "", "", "",  "", "", "", "",  };
+static const char *tags[] = { "", "", "", "", "",  "", "", "", "" };
 
 static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
@@ -46,9 +46,9 @@ static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] 
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const Layout layouts[] = {
-	{ "{T}",      tile },    /* first entry is default */
-	{ "{/}",      NULL },    /* no layout function means floating behavior */
-	{ "{F}",      monocle },
+	{ "",      tile },    /* first entry is default */
+	{ "",      NULL },    /* no layout function means floating behavior */
+	{ "",      monocle },
 };
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */

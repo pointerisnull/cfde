@@ -194,7 +194,7 @@ static void resizeclient(Client *c, int x, int y, int w, int h);
 static void resizemouse(const Arg *arg);
 static void restack(Monitor *m);
 static void run(void);
-static void runAutostart(void);
+static void startup_scripts(void);
 static void scan(void);
 static int sendevent(Client *c, Atom proto);
 static void sendmon(Client *c, Monitor *m);
@@ -1113,8 +1113,9 @@ monocle(Monitor *m)
 	for (c = m->clients; c; c = c->next)
 		if (ISVISIBLE(c))
 			n++;
-	if (n > 0) /* override layout symbol */
-		snprintf(m->ltsymbol, sizeof m->ltsymbol, "[%d]", n);
+  /* override layout symbol */
+	/*if (n > 0) 
+		snprintf(m->ltsymbol, sizeof m->ltsymbol, "[%d]", n);*/
 	for (c = nexttiled(m->clients); c; c = nexttiled(c->next))
 		resize(c, m->wx, m->wy, m->ww - 2 * c->bw, m->wh - 2 * c->bw, 0);
 }
@@ -1384,8 +1385,8 @@ run(void)
 			handler[ev.type](&ev); /* call handler */
 }
 
-void runAutostart() {
-	system("cd ~/.config/cfwm; ./autostart.sh &");
+void startup_scripts() {
+	system("cd ~/.config/dwm; ./autostart.sh &");
 }
 
 void
@@ -2160,7 +2161,7 @@ main(int argc, char *argv[])
 		die("pledge");
 #endif /* __OpenBSD__ */
 	scan();
-	runAutostart();
+	startup_scripts();
 	run();
 	cleanup();
 	XCloseDisplay(dpy);
